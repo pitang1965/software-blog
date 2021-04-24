@@ -84,7 +84,7 @@ const ContentWrapper = styled.section`
     border: 0;
     border-left: solid 12px #999;
   }
-   overflow: hidden;
+   overflow: scroll;
 `;
 
 const ButtonsWrapper = styled.nav`
