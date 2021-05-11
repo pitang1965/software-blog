@@ -84,6 +84,10 @@ const ContentWrapper = styled.section`
     border: 0;
     border-left: solid 12px #999;
   }
+  ol {
+    list-style: decimal;
+    padding-left: 30px;
+  }
    overflow: scroll;
 `;
 

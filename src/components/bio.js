@@ -52,7 +52,7 @@ const Bio = () => {
           {` `}
           {author?.twitter && (
             <a href={`https://twitter.com/${author?.twitter || ``}`}>
-              You should follow them on Twitter
+              お気軽にフォロー願います。
             </a>
           )}
         </p>
