@@ -42,6 +42,10 @@ const PageWrapper = styled.article`
     border: 0;
     border-left: solid 12px #999;
   }
+  ul {
+    list-style-type: disc;
+    padding-left: 30px;
+  }
 `;
 
 const PageTemplate = ({ data }) => (
@@ -56,7 +60,7 @@ const PageTemplate = ({ data }) => (
 export default PageTemplate;
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     wpPage(id: { eq: $id }) {
       id
       title
