@@ -58,7 +58,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -71,6 +71,10 @@ const Seo = ({ description, lang, meta, title }) => {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: 'https://software.pitang1965.com/wp-content/uploads/2019/10/header-1024x341.jpg',
         },
       ].concat(meta)}
     />
