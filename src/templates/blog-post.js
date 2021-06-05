@@ -10,23 +10,38 @@ import '@wordpress/block-library/build-style/theme.css';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import { Button } from '../components/Button';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const PostWrapper = styled.article`
   display: grid;
-  grid-template:
-    '... ......  ......  ......  ...' var(--spacing-2)
-    '... header  header  header  ...'
-    '... ...... ...... ......  ...' var(--spacing-2)
-    '... image   ......  ......  ...' 150px
-    '... ......  ......  ......  ...' var(--spacing-2)
-    '... content content content ...'
-    '... ......  ......  ......  ...' var(--spacing-2)
-    '... buttons buttons buttons ...'
-    '... ......  ......  ......  ...' var(--spacing-2)
-    / var(--spacing-2) 150px var(--spacing-2) 1fr var(--spacing-2);
+  ${props =>
+    props.noimage
+      ? css`
+          grid-template:
+            '... ......  ...' var(--spacing-2)
+            '... header  ...'
+            '... .......  ...' var(--spacing-2)
+            '... content ...'
+            '... ......  ...' var(--spacing-2)
+            '... buttons ...'
+            '... ......  ...' var(--spacing-2)
+            / var(--spacing-2)  1fr var(--spacing-2);
+        `
+      : css`
+          grid-template:
+            '... ......  ......  ......  ...' var(--spacing-2)
+            '... header  header  header  ...'
+            '... ......  ......  ......  ...' var(--spacing-2)
+            '... image   ......  ......  ...' 300px
+            '... ......  ......  ......  ...' var(--spacing-2)
+            '... content content content ...'
+            '... ......  ......  ......  ...' var(--spacing-2)
+            '... buttons buttons buttons ...'
+            '... ......  ......  ......  ...' var(--spacing-2)
+            / var(--spacing-2) 300px var(--spacing-2) 1fr var(--spacing-2);
+        `};
+
   border: 1px solid #ddd;
-}
 `;
 
 const PostHeader = styled.header`
@@ -44,10 +59,10 @@ const PostHeader = styled.header`
 const ImageWrapper = styled.div`
   grid-area: image;
   img {
-    max-width: 150px;
-    min-width: 150px;
-    max-height: 150px;
-    min-width: 150px;
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 300px;
+    min-width: 300px;
   }
 `;
 
@@ -88,7 +103,7 @@ const ContentWrapper = styled.section`
     list-style: decimal;
     padding-left: 30px;
   }
-   overflow: scroll;
+  overflow: scroll;
 `;
 
 const ButtonsWrapper = styled.nav`
@@ -126,11 +141,17 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
     alt: post.featuredImage?.node?.altText || ``,
   };
 
+  const noImage = !featuredImage?.imageData;
+
   return (
     <Layout>
       <Seo title={post.title} description={post.excerpt} />
 
-      <PostWrapper itemScope itemType="http://schema.org/Article">
+      <PostWrapper
+        itemScope
+        itemType="http://schema.org/Article"
+        noimage={noImage}
+      >
         <PostHeader>
           <div>
             <span itemProp="headline">{parse(post.title)}</span>
@@ -138,7 +159,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
           <small>{post.date}</small>
         </PostHeader>
         {/* if we have a featured image for this post let's display it */}
-        {featuredImage?.imageData && (
+        {!noImage && (
           <ImageWrapper>
             <GatsbyImage
               image={featuredImage.imageData}
