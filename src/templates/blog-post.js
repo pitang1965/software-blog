@@ -71,6 +71,10 @@ const ContentWrapper = styled.section`
 
   a {
     text-decoration: underline;
+    color: var(--color-link);
+  }
+  a:hover {
+    color: var(--color-link-hover)
   }
   h2,
   h3,

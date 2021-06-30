@@ -51,12 +51,21 @@ const Bio = () => {
           {author?.description || null}
           {` `}
           {author?.twitter && (
-            <a href={`https://twitter.com/${author?.twitter || ``}`}>
+            <p>
+              <a href={`https://software.pitang1965.com/`}>
+                https://software.pitang1965.com/
+              </a>
               お気軽にフォロー願います。
-            </a>
+            </p>
           )}
         </p>
       )}
+      <p>
+        このサイトはGatsby.jsを用いたヘッドレスWordPressサイトです。
+        元のWordPressサイトは
+        <a href={`https://twitter.com/${author?.twitter || ``}`}>こちら</a>
+        です。
+      </p>
     </BioWrapper>
   );
 };

@@ -8,6 +8,13 @@ const SideBarWrapper = styled.aside`
   flex-direction: column;
   border: 1px solid #ddd;
   padding: var(--spacing-2);
+  a {
+    text-decoration: underline;
+    color: var(--color-link);
+  }
+  a:hover {
+    color: var(--color-link-hover);
+  }
 `;
 
 const SideBar = () => {
