@@ -6951,14 +6951,13 @@ gatsby-plugin-catch-links@^3.9.0:
     "@babel/runtime" "^7.14.0"
     escape-string-regexp "^1.0.5"
 
-gatsby-plugin-google-analytics@^3.9.0:
+gatsby-plugin-google-gtag@^3.9.0:
   version "3.9.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-3.9.0.tgz#550cf9a31d05c8f627d7a963df0acaafef416849"
-  integrity sha512-vK/NEl4uJI6QdlhK+CwCsMdEw5Ikl0bKi/TYjoCn0mjN/45qlxlOL2Yz7r813dD742hdz75HQhxedWG9MRH2Cg==
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-3.9.0.tgz#52b10ede80a966a7a1573a7015b714e666c7feaa"
+  integrity sha512-k4NlT4rWnmsfz6xZ2RAqA3j7CwD/PvSahrf+fyi7c/E7TmUOLCRuWy3UyluOGBc8Od0vESU6eYIyHHeFZJco3w==
   dependencies:
     "@babel/runtime" "^7.14.0"
-    minimatch "3.0.4"
-    web-vitals "^1.1.2"
+    minimatch "^3.0.4"
 
 gatsby-plugin-image@^1.9.0:
   version "1.9.0"
@@ -14550,11 +14549,6 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   integrity sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==
   dependencies:
     minimalistic-assert "^1.0.0"
-
-web-vitals@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-1.1.2.tgz#06535308168986096239aa84716e68b4c6ae6d1c"
-  integrity sha512-PFMKIY+bRSXlMxVAQ+m2aw9c/ioUYfDgrYot0YUa+/xa0sakubWhSDyxAKwzymvXVdF4CZI71g06W+mqhzu6ig==
 
 webidl-conversions@^5.0.0:
   version "5.0.0"
