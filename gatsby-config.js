@@ -36,7 +36,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `./content/assets/yama512.png`,
+        icon: `./content/assets/yama.png`,
       },
     },
     `gatsby-plugin-image`,
