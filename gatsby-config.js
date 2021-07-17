@@ -37,20 +37,6 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `./content/assets/yama512.png`,
-        icons: [
-          {
-            src: './content/assets/maskable-yama192.png',
-            sizes: '192x192',
-            type: 'image/png',
-            purpose: 'maskable',
-          },
-          {
-            src: './content/assets/maskable-yama512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'maskable',
-          },
-        ],
       },
     },
     `gatsby-plugin-image`,
