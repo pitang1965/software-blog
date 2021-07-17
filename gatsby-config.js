@@ -26,6 +26,33 @@ module.exports = {
    * If you need any more you can search here: https://www.gatsbyjs.com/plugins/
    */
   plugins: [
+    {
+      // See https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/?=gatsby-plugin-manifest
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `定年後にWeb開発者目指す`,
+        short_name: `ピータンブログ`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `./content/assets/yama512.png`,
+        icons: [
+          {
+            src: './content/assets/maskable-yama192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
+          {
+            src: './content/assets/maskable-yama512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
+        ],
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     {
@@ -67,34 +94,6 @@ module.exports = {
      */
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-
-    {
-      // See https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/?=gatsby-plugin-manifest
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `定年後にWeb開発者目指す`,
-        short_name: `ピータンブログ`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `/content/assets/yama512.png`,
-        icons: [
-          {
-            src: '/content/assets/maskable-yama192.png',
-            sizes: '192x192',
-            type: 'image/png',
-            purpose: 'maskable',
-          },
-          {
-            src: '/content/assets/maskable-yama512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'maskable',
-          },
-        ],
-      },
-    },
 
     // See https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet
     `gatsby-plugin-react-helmet`,
