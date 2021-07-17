@@ -78,16 +78,16 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/yama512.png`,
+        icon: `/content/assets/yama512.png`,
         icons: [
           {
-            src: 'content/assets/maskable-yama192.png',
+            src: '/content/assets/maskable-yama192.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'maskable',
           },
           {
-            src: 'content/assets/maskable-yama512.png',
+            src: '/content/assets/maskable-yama512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
