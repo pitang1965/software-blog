@@ -31,6 +31,7 @@ const Seo = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || wp.generalSettings?.description
   const defaultTitle = wp.generalSettings?.title
+  const imageUrl = 'https://raw.githubusercontent.com/pitang1965/software-blog/main/src/images/site-hero.jpg';
 
   return (
     <Helmet
@@ -58,7 +59,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           property: `og:image`,
-          content: 'https://raw.githubusercontent.com/pitang1965/software-blog/main/src/images/site-hero.jpg',
+          content: imageUrl,
         },
         {
           name: `twitter:card`,
@@ -78,7 +79,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:image`,
-          content: 'https://raw.githubusercontent.com/pitang1965/software-blog/main/src/images/site-hero.jpg',
+          content: imageUrl,
         },
       ].concat(meta)}
     />
