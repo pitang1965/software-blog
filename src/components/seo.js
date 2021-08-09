@@ -78,7 +78,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:image`,
-          content: 'https://software.pitang1965.com/wp-content/uploads/2019/10/header-1024x341.jpg',
+          content: 'https://raw.githubusercontent.com/pitang1965/software-blog/main/src/images/site-hero.jpg',
         },
       ].concat(meta)}
     />
