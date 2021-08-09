@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Seo = ({ description, lang, meta, title }) => {
+const Seo = ({ description, lang, meta, title, imageUrl }) => {
   const { wp, wpUser } = useStaticQuery(
     graphql`
       query {
@@ -31,7 +31,7 @@ const Seo = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || wp.generalSettings?.description
   const defaultTitle = wp.generalSettings?.title
-  const imageUrl = 'https://raw.githubusercontent.com/pitang1965/software-blog/main/src/images/site-hero.jpg';
+  const metaImageUrl = imageUrl ? `https://pitang1965.gatsbyjs.io/${imageUrl}`:'https://raw.githubusercontent.com/pitang1965/software-blog/main/src/images/site-hero.jpg';
 
   return (
     <Helmet
@@ -59,7 +59,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           property: `og:image`,
-          content: imageUrl,
+          content: metaImageUrl,
         },
         {
           name: `twitter:card`,
@@ -79,7 +79,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:image`,
-          content: imageUrl,
+          content: metaImageUrl,
         },
       ].concat(meta)}
     />

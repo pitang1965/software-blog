@@ -25,7 +25,7 @@ const PostWrapper = styled.article`
             '... ......  ...' var(--spacing-2)
             '... buttons ...'
             '... ......  ...' var(--spacing-2)
-            / var(--spacing-2)  1fr var(--spacing-2);
+            / var(--spacing-2) 1fr var(--spacing-2);
         `
       : css`
           grid-template:
@@ -74,7 +74,7 @@ const ContentWrapper = styled.section`
     color: var(--color-link);
   }
   a:hover {
-    color: var(--color-link-hover)
+    color: var(--color-link-hover);
   }
   h2,
   h3,
@@ -143,14 +143,18 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
     imageData:
       post.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData,
     alt: post.featuredImage?.node?.altText || ``,
+    publicURL: post.featuredImage?.node?.localFile?.publicURL,
   };
 
   const noImage = !featuredImage?.imageData;
 
   return (
     <Layout>
-      <Seo title={post.title} description={post.excerpt} />
-
+      <Seo
+        title={post.title}
+        description={post.excerpt}
+        imageUrl={featuredImage.publicURL}
+      />
       <PostWrapper
         itemScope
         itemType="http://schema.org/Article"
@@ -171,7 +175,6 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
             />
           </ImageWrapper>
         )}
-
         {!!post.content && (
           <ContentWrapper itemProp="articleBody">
             {parse(post.content)}
@@ -220,6 +223,7 @@ export const pageQuery = graphql`
                 formats: [AUTO, WEBP]
               )
             }
+            publicURL
           }
         }
       }
