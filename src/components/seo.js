@@ -58,7 +58,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           property: `og:image`,
-          content: 'https://software.pitang1965.com/wp-content/uploads/2021/06/IMG_7323-1024x349.jpg',
+          content: 'https://raw.githubusercontent.com/pitang1965/software-blog/main/src/images/site-hero.jpg',
         },
         {
           name: `twitter:card`,
