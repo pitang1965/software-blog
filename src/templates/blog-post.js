@@ -116,7 +116,7 @@ const ButtonsWrapper = styled.nav`
   justify-content: space-between;
   gap: var(--spacing-2);
 
-  >: first-child {
+  > first-child {
     height: auto;
     flex-grow: 1;
     font-size: 0.8em;
@@ -126,7 +126,7 @@ const ButtonsWrapper = styled.nav`
       font-weight: bold;
     }
   }
-  > :last-child {
+  > last-child {
     height: auto;
     flex-grow: 1;
     font-size: 0.8em;
