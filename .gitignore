@@ -71,4 +71,4 @@ yarn-error.log
 .yarn-integrity
 
 #others
-setting.json
+.vscode/settings.json
