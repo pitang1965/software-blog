@@ -39,6 +39,30 @@ module.exports = {
         icon: `./content/assets/yama.png`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-htaccess',
+      options: {
+        RewriteBase: '/custom/',
+        https: true,
+        www: false,
+        SymLinksIfOwnerMatch: true,
+        host: 'gatsbyjs.io/', // if 'www' is set to 'false', be sure to also remove it here!
+        ErrorDocument: `
+          ErrorDocument 404 /404/index.html
+        `,
+        redirect: [
+          'RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]',
+          {
+            from: 'pitang1965.gatsbyjs.io',
+            to: 'blog.pitang1965.com',
+          },
+        ],
+        custom: `
+            # This is a custom rule!
+            # This is a another custom rule!
+        `,
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     {
