@@ -46,7 +46,7 @@ module.exports = {
         https: true,
         www: false,
         SymLinksIfOwnerMatch: true,
-        host: 'gatsbyjs.io/', // if 'www' is set to 'false', be sure to also remove it here!
+        host: 'pitang1965.gatsbyjs.io', // if 'www' is set to 'false', be sure to also remove it here!
         ErrorDocument: `
           ErrorDocument 404 /404/index.html
         `,
