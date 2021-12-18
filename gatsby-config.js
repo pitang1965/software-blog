@@ -42,16 +42,15 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-htaccess',
       options: {
-        RewriteBase: '/custom/',
+        RewriteBase: '/',
         https: true,
         www: false,
         SymLinksIfOwnerMatch: true,
-        host: 'pitang1965.gatsbyjs.io', // if 'www' is set to 'false', be sure to also remove it here!
+        host: 'blog.pitang1965.com', // if 'www' is set to 'false', be sure to also remove it here!
         ErrorDocument: `
           ErrorDocument 404 /404/index.html
         `,
         redirect: [
-          'RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]',
           {
             from: 'pitang1965.gatsbyjs.io',
             to: 'blog.pitang1965.com',
