@@ -29,7 +29,7 @@
     "gatsby-source-filesystem": "^4.4.0",
     "gatsby-source-wordpress": "^6.4.0",
     "gatsby-transformer-sharp": "^4.4.0",
-    "html-react-parser": "^1.4.3",
+    "html-react-parser": "1.4.5",
     "lodash": "^4.17.21",
     "postcss": "^8.4.5",
     "react": "^17.0.2",
