@@ -259,3 +259,26 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+.wp-block-code > code {
+  background-color: #193549;
+}
+
+.sh__class {
+  color: #66f2ff;
+}
+.sh__identifier {
+  color: #fff2d0;
+}
+.sh__sign {
+  color: #e1efff;
+}
+.sh__string {
+  color: #a5ff7e;
+}
+.sh__keyword {
+  color: #ff902f;
+}
+.sh__comment {
+  color: #0088ff;
+}

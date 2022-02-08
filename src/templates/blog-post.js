@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import parse from 'html-react-parser';
+import { highlightCodeContents } from '../util/highlightCode';
 
 // We're using Gutenberg so we need the block styles
 import '@wordpress/block-library/build-style/style.css';
@@ -177,7 +178,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
         )}
         {!!post.content && (
           <ContentWrapper itemProp="articleBody">
-            {parse(post.content)}
+            {parse(highlightCodeContents(post.content))}
           </ContentWrapper>
         )}
         <ButtonsWrapper>
