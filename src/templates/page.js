@@ -18,7 +18,7 @@ const PageWrapper = styled.article`
   }
   h1 {
     border-left: 8px solid #999;
-    font-size: var(--fontSize-4);
+    font-size: var(--fontSize-5);
     font-weight: var(--fontWeight-bold);
     padding: var(--spacing-2) var(--spacing-5);
     line-height: var(--spacing-7);

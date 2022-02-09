@@ -20,7 +20,7 @@ const LayoutWrapper = styled.div`
     '... ...... ...... ......  ...' var(--spacing-5)
     / minmax(var(--spacing-5), 1fr) minmax(400px, 5fr) var(--spacing-5) 340px minmax(var(--spacing-5), 1fr);
 
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     grid-template:
       '... ......  ...' var(--spacing-5)
       '... header  ...'
