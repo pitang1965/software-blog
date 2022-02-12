@@ -14,8 +14,8 @@ const chunk = require(`lodash/chunk`);
 exports.createPages = async gatsbyUtilities => {
   const { createRedirect } = gatsbyUtilities.actions;
   createRedirect({
-    fromPath: '',
-    toPath: '',
+    fromPath: '/*',
+    toPath: '/',
     statusCode: 200,
   });
 
