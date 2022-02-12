@@ -85,9 +85,16 @@ const ContentWrapper = styled.section`
     margin-top: var(--spacing-6);
     margin-bottom: var(--spacing-6);
   }
+  h1 {
+    border-left: 8px solid #999;
+    :var(--fontSize-5) ;
+    font-weight: var(--fontWeight-semibold);
+    padding: var(--spacing-2) var(--spacing-5);
+    line-height: var(--spacing-7);
+  }
   h2 {
     border-left: 8px solid #999;
-    font-size: var(--fontSize-3);
+    :var(--fontSize-3) ;
     font-weight: var(--fontWeight-semibold);
     padding: var(--spacing-2) var(--spacing-5);
     line-height: var(--spacing-7);
