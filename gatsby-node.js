@@ -12,13 +12,6 @@ const chunk = require(`lodash/chunk`);
  * See https://www.gatsbyjs.com/docs/node-apis/#createPages for more info.
  */
 exports.createPages = async gatsbyUtilities => {
-  const { createRedirect } = gatsbyUtilities.actions;
-  createRedirect({
-    fromPath: '/*',
-    toPath: '/',
-    statusCode: 200,
-  });
-
   // Query our posts from the GraphQL server
   const { allWpPost, allWpPage, allWpTag } = await getData(gatsbyUtilities);
 
