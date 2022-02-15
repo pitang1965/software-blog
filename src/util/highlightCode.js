@@ -17,6 +17,8 @@ const removeCodeTags = org_string => {
 
 export function highlightCodeContents(htmlContent) {
   try {
+    if (typeof window === 'undefined') return htmlContent;
+
     // HTML文字列をDOMのDocumentとして解釈
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlContent, 'text/html');
