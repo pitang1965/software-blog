@@ -62,6 +62,14 @@
   --color-accent: #d1dce5;
   --color-link: #4169e1;
   --color-link-hover: #dc143c;
+
+  --sh-class: #2d5e9d;
+  --sh-identifier: #354150;
+  --sh-sign: #8996a3;
+  --sh-string: #00a99a;
+  --sh-keyword: #f47067;
+  --sh-comment: #a19595;
+  --sh-jsxliterals: #6266d1;
 }
 
 /* HTML elements */
@@ -261,24 +269,5 @@ a:focus {
 }
 
 .wp-block-code > code {
-  background-color: #193549;
-}
-
-.sh__class {
-  color: #66f2ff;
-}
-.sh__identifier {
-  color: #fff2d0;
-}
-.sh__sign {
-  color: #e1efff;
-}
-.sh__string {
-  color: #a5ff7e;
-}
-.sh__keyword {
-  color: #ff902f;
-}
-.sh__comment {
-  color: #0088ff;
+  background-color: white;
 }
